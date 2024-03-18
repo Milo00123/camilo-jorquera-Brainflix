@@ -1,0 +1,80 @@
+form {
+  width: 90%;
+  display: flex;
+  margin: auto;
+}
+form img {
+  background-image: url("../../assets/Images/Mohan-muruge.jpg");
+  background-size: cover;
+  border-radius: 50px;
+  width: 50px;
+  height: 40px;
+  margin-right: 20px;
+  margin-top: 25px;
+}
+form .form-container {
+  width: 100%;
+}
+form .form-container label {
+  font-family: avenir-demi;
+  color: #e1e1e1;
+  font-size: 5px;
+}
+form textarea {
+  width: 98%;
+  height: 100px;
+  margin-top: 10px;
+  border: 2px solid #e1e1e1;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+form button {
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border-color: #0095FF;
+  background-color: #0095FF;
+  color: #fff;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  form img {
+    height: 50px;
+  }
+  form textarea {
+    width: 65%;
+    height: 40px;
+  }
+  form button {
+    width: 30%;
+    height: 50px;
+    position: absolute;
+    right: 1px;
+    top: 18px;
+  }
+  .form-container {
+    height: 100px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+}
+@media (min-width: 1279px) {
+  form {
+    width: 60%;
+    margin-left: 5%;
+    margin-right: 0;
+  }
+  form img {
+    margin-left: 50px;
+  }
+  form button {
+    margin-right: 20px;
+  }
+  form textarea {
+    width: 60%;
+    margin-left: 20px;
+  }
+}/*# sourceMappingURL=Comments.css.map */

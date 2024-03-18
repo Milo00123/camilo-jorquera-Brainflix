@@ -1,0 +1,75 @@
+// @use '../../styles/fonts' as *;
+
+h1{
+    margin-left: 5%;
+    font-family: 'avenir-bold';
+}
+.main-container{
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;
+}
+.views-likes--container{
+    width: 40%;
+}
+.main-video-description{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.p-views--img{
+    background-image: url(../../assets/Icons/likes.svg);
+    background-size: cover;
+}
+
+//tablet//
+@media (min-width: 768px){
+
+    video{
+        height: 400px;
+    }
+    .main-container{
+        display: flex;
+       align-items: center;
+       span{
+        margin-top: 15px;
+        margin-left: 20px;
+       }
+    }
+    h1{
+        font-size: 33px;
+    }
+    .views-likes--container{
+        width: auto;
+        display: flex;
+    }
+
+    .channel-timestamp--container{
+        display: flex;
+    }
+}
+
+@media (min-width: 1279px){
+    video{
+        height: 500px;
+    }
+    .video-description--wrap{
+        width: 60%;
+        margin-left: 5%;
+    }
+    .main-container{
+        margin-right: 0;
+        padding-right: 20px;
+        border-top: none;
+    }
+    .p-views{
+        margin-right: 20px;
+    }
+    img{
+        margin-right: 10px;
+    }
+
+}

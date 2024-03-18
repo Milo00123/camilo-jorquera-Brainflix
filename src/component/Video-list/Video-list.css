@@ -1,0 +1,34 @@
+h2 {
+  margin-left: 5%;
+}
+
+.video-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  margin-left: 5%;
+}
+
+.description-video--list {
+  width: 200px;
+  margin-left: 10px;
+}
+.description-video--list p {
+  margin-top: auto;
+}
+
+.image-list {
+  width: 100px;
+  height: 70px;
+  border-radius: 4px;
+  background-size: cover;
+}
+
+@media (min-width: 1279px) {
+  .video-list--section {
+    position: absolute;
+    right: 193px;
+    top: 590px;
+    border-left: 1px solid #e1e1e1;
+  }
+}/*# sourceMappingURL=Video-list.css.map */
