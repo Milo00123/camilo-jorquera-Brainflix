@@ -16,8 +16,8 @@ form .form-container {
   width: 100%;
 }
 form .form-container label {
-  font-family: avenir-demi;
-  color: #e1e1e1;
+  color: #afafaf;
+  font-weight: 600;
   font-size: 5px;
 }
 form textarea {
@@ -27,6 +27,10 @@ form textarea {
   border: 2px solid #e1e1e1;
   border-radius: 4px;
   background-color: #fafafa;
+}
+form button:hover {
+  background-color: #0065AD;
+  cursor: pointer;
 }
 form button {
   width: 100%;

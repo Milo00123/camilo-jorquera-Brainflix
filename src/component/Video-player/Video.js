@@ -26,10 +26,14 @@ function Video(props){
                    <span>{formatDate}</span>
               </div>
                  <div className="views-likes--container">
-                      <img src={viewIcon}  alt="Icon Description" />
-                       <p className='p-views'>{videoDetails.views}</p>
-                     <img src={likeIcon}alt="Icon Description"/>
-                      <p className='p-likes'>{videoDetails.likes}</p>
+                    <div className='views-container'>
+                        <img src={viewIcon}  alt="Icon Description" />
+                         <p className='p-views'>{videoDetails.views}</p>
+                   </div>
+                   <div className='likes-container'>
+                         <img src={likeIcon}alt="Icon Description"/>
+                         <p className='p-likes'>{videoDetails.likes}</p>
+                     </div>
         
                   </div>
           </div>

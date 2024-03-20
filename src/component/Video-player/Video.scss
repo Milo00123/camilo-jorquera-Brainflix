@@ -1,8 +1,9 @@
-// @use '../../styles/fonts' as *;
+
 
 h1{
     margin-left: 5%;
-    font-family: 'avenir-bold';
+    width: 300px;
+    
 }
 .main-container{
     margin-left: 5%;
@@ -11,9 +12,31 @@ h1{
     justify-content: space-between;
     border-bottom: 1px solid #e1e1e1;
     border-top: 1px solid #e1e1e1;
+   
+
+    
+}
+.channel-timestamp--container{
+    p{
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    span{
+        color: #afafaf;
+        
+    }
 }
 .views-likes--container{
     width: 40%;
+    color: #afafaf;
+    p{
+        margin-left: 10px;
+        margin-right: 10px;
+        
+    }
+}
+.views-container, .likes-container{
+    display: flex;
 }
 .main-video-description{
     margin-left: 5%;
@@ -31,6 +54,9 @@ h1{
     video{
         height: 400px;
     }
+    h1{
+        width: auto;
+    }
     .main-container{
         display: flex;
        align-items: center;
@@ -46,12 +72,14 @@ h1{
         width: auto;
         display: flex;
     }
+    
 
     .channel-timestamp--container{
         display: flex;
     }
 }
 
+//Desktop//
 @media (min-width: 1279px){
     video{
         height: 500px;

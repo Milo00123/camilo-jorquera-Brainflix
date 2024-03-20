@@ -28,7 +28,7 @@ function CommentsList({comments}){
             
                 <div className="inner-comment-container">
                     <div className="inner-inner--container">
-                        <p className="name-comment--list" >{commentVideo.name}</p>
+                        <p className="name-comment--list p-bold" >{commentVideo.name}</p>
                         <p className="date-comment--list">{convertToDate(commentVideo.timestamp)}</p>
                     </div>
                     <p className="comment-comment--list">{commentVideo.comment}</p>

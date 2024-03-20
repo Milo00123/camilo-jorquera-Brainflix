@@ -15,7 +15,7 @@ function VideoList({videoListData, onVideoClick, activeVideo}){
             <div className="video-wrap" key={video.id} onClick={() => onVideoClick(video.id)}>
             <img className='image-list' src={video.image} alt="Description" />
             <div className='description-video--list'>
-                <p>{video.title}</p>
+                <p className='p-bold'>{video.title}</p>
                 <span>{video.channel}</span>
              </div>
             </div>

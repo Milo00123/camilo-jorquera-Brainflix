@@ -18,5 +18,39 @@
 }
 body {
   font-family: "Avenir Next";
-  font-weight: 700;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.p-bold {
+  font-weight: 600;
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #323232;
+}
+
+h2 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #afafaf;
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  .p-bold {
+    font-weight: 600;
+  }
+  h1 {
+    font-weight: 600;
+    font-size: 33px;
+  }
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+  }
 }/*# sourceMappingURL=App.css.map */

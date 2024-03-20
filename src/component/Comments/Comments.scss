@@ -2,9 +2,8 @@
 
 form{
     width: 90%;
-    display: flex;
-    
-   margin: auto;
+    display: flex;   
+    margin: auto;
    img{
     background-image: url('../../assets/Images/Mohan-muruge.jpg');
     background-size: cover;
@@ -18,8 +17,8 @@ form{
    .form-container{
     width: 100%;
     label{
-        font-family: avenir-demi;
-        color: #e1e1e1;
+        color: #afafaf;
+        font-weight: 600;
         font-size: 5px;
         
     }
@@ -32,6 +31,10 @@ form{
     border-radius: 4px;
     background-color: #fafafa;
    
+   }
+   button:hover{
+    background-color: #0065AD;
+    cursor: pointer;
    }
    button{
     width: 100%;
