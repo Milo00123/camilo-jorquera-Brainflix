@@ -4,11 +4,11 @@ import './Page.scss';
 function Page() {
   return (<>
     
-    <h1>Upload Video</h1>
+    <h1 className='title-page-upload'>Upload Video</h1>
     <form className='page-form'>
         <div className='page-video--container'> 
              <label>VIDEO THUMBNAIL</label>        
-             <video className='page-video' width={'100%'}  height={'200px'}  controls/>
+             <video className='page-video' controls/>
        </div> 
        <div className='page-textarea--container'>
           <label>TITLE YOUR VIDEO</label>

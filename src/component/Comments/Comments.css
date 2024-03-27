@@ -1,3 +1,48 @@
+.video-title {
+  margin-left: 5%;
+  width: 300px;
+}
+
+.main-container {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;
+}
+
+.channel-timestamp--container p {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.channel-timestamp--container span {
+  color: #afafaf;
+}
+
+.views-likes--container {
+  width: 40%;
+  color: #afafaf;
+}
+.views-likes--container p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.views-container, .likes-container {
+  display: flex;
+}
+
+.main-video-description {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.p-views--img {
+  background-image: url("../../assets/Icons/likes.svg");
+  background-size: cover;
+}
+
 form {
   width: 90%;
   display: flex;
@@ -45,6 +90,26 @@ form button {
 }
 
 @media (min-width: 768px) {
+  .video-title {
+    width: auto;
+    font-size: 33px;
+  }
+  .main-container {
+    display: flex;
+    align-items: center;
+    border-top: none;
+  }
+  .main-container span {
+    margin-top: 15px;
+    margin-left: 20px;
+  }
+  .views-likes--container {
+    width: auto;
+    display: flex;
+  }
+  .channel-timestamp--container {
+    display: flex;
+  }
   form img {
     height: 50px;
   }
@@ -66,9 +131,24 @@ form button {
   }
 }
 @media (min-width: 1279px) {
+  .video-description--wrap {
+    width: 90%;
+    margin-left: 10%;
+  }
+  .main-container {
+    margin-right: 0;
+    padding-right: 20px;
+    border-top: none;
+  }
+  .p-views {
+    margin-right: 20px;
+  }
+  img {
+    margin-right: 10px;
+  }
   form {
-    width: 60%;
-    margin-left: 5%;
+    width: 90%;
+    margin-left: 10%;
     margin-right: 0;
   }
   form img {

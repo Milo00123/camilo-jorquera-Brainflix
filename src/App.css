@@ -53,4 +53,9 @@ h2 {
     font-size: 15px;
     font-weight: 600;
   }
+}
+@media (min-width: 1279px) {
+  .comments-video-list {
+    display: flex;
+  }
 }/*# sourceMappingURL=App.css.map */

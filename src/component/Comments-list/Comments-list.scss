@@ -46,8 +46,12 @@
 }
 //DESKTOP//
 @media (min-width: 1279px){
+    .comment-avatar{
+        margin-top: 30px;
+    }
     .comments-list--container{
-        width: 60%;
+        width: 90%;
+        margin-left: 10%;
         
     }
     .comment-wrap{
@@ -58,7 +62,17 @@
         margin-right: 20px;
     }
     .comment-comment--list{
+        margin-top: 0;
         margin-right: 20px;
+        margin-bottom: 30px;
     }
+
+    .inner-inner--container{
+        margin-top: 20px;
+    }
+    .name-comment--list{
+        margin-bottom: 0;
+    }
+    
 
 }

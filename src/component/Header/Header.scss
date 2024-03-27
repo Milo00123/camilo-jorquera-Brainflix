@@ -8,13 +8,12 @@
 }
 .header-container{
     margin: 10px 5% 0 5% ;
-    img{
-        
-        margin-left: 35%;
-        margin-bottom: 15px;
-        
-    }
  
+}
+.brainflix-logo {
+    margin-left: 35%;
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 .container-logo--avatar{
     position: relative;
@@ -24,9 +23,9 @@
         height: 36px;
         border-radius: 4px ;
         border: 1px solid #e1e1e1;
-        
     }
 }
+
 .header-button:hover{
     background-color:#0065AD;
     cursor: pointer;
@@ -63,13 +62,14 @@
         display: flex;
         justify-content: space-between;
         align-items: baseline;
-        img{
+    
         
-            margin-left: 0;
-            margin-bottom: 15px;
-            
-        }
     }
+    .brainflix-logo{
+        margin-left: 0;
+            margin-bottom: 15px;
+    }
+    
     .container-logo--avatar{
         display: flex;
         width: 70%;

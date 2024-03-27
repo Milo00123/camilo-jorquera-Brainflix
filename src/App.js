@@ -24,8 +24,12 @@ function App() {
     <Route path='page' element={<Page />}/>
     <Route path='/'element={<>
     <Video  videoData = {activeVideo}/>
-    <Comments videoData = {activeVideo} />
-    <VideoList videoListData={VideoListJson} onVideoClick={handleVideoClick} activeVideo={activeVideo}/> 
+    <div className='comments-video-list'>
+        <div className='comments-container'>
+          <Comments videoData = {activeVideo}  />
+        </div> 
+          <VideoList videoListData={VideoListJson} onVideoClick={handleVideoClick} activeVideo={activeVideo}/> 
+    </div>
     </>}/>
   </Routes>
   </BrowserRouter>

@@ -9,9 +9,11 @@
 .header-container {
   margin: 10px 5% 0 5%;
 }
-.header-container img {
+
+.brainflix-logo {
   margin-left: 35%;
   margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .container-logo--avatar {
@@ -58,7 +60,7 @@
     justify-content: space-between;
     align-items: baseline;
   }
-  .header-container img {
+  .brainflix-logo {
     margin-left: 0;
     margin-bottom: 15px;
   }

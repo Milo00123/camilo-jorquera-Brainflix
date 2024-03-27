@@ -1,8 +1,7 @@
 import './Header.scss';
-import { Navigate, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import logo from '../../assets/Logo/BrainFlix-logo.svg';
-
-
+import faSearch from '../../assets/Icons/search.svg';
 
 function Header (){
    const navigate = useNavigate()
@@ -12,9 +11,12 @@ function Header (){
         <header className="header">
             <div className='header-container'>
                 
-                  <img src={logo} className="brainflix-logo" alt="logo"></img>
+                  <img src={logo} onClick={()=> navigate('/')} className="brainflix-logo" alt="logo"></img>
              <div className='container-logo--avatar'>
-                   <input type="text" placeholder="Search"></input>        
+                  <div className='input-container'>
+                       <img icon={faSearch} className="input-icon"></img>
+                   <input type="text" placeholder=" Search"></input>  
+                   </div>      
                 <button className='header-button' onClick={()=> navigate('page')}>UPLOAD</button>
                 <div className='avatar-icon'></div>
                 </div>

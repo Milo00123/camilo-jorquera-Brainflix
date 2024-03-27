@@ -1,6 +1,6 @@
-import jsonData from '../../data/video-details.json'
+
 import './Comments-list.scss'
-import { useState } from 'react';
+
 
  
 function CommentsList({comments}){
