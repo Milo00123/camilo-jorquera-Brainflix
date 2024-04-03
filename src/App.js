@@ -1,38 +1,26 @@
-import { useState } from 'react';
-import { Route, Routes, Navigate, NavLink, BrowserRouter } from 'react-router-dom';
+import { Route, Routes, Navigate, BrowserRouter } from 'react-router-dom';
 import './App.scss';
-import Comments from './component/Comments/Comments';
 import Header from './component/Header/Header';
-import Video from './component/Video-player/Video';
-import jsonData from './data/video-details.json';
-import VideoListJson from './data/videos.json';
-import VideoList from './component/Video-list/Video-list';
 import Page from './Pages/Page/Page';
+import VideoDetailsPage from './Pages/Video-details/Video-details';
 
+
+
+const home = '/video/84e96018-4022-434e-80bf-000ce4cd12b8';
 
 function App() {
-  const [activeVideo, setActiveVideo] = useState(jsonData[0]);
-  
-  const handleVideoClick = (videoId) => {
-    const video = jsonData.find(video => video.id === videoId);
-    setActiveVideo(video);
-  };
+
+
   return ( <>
-  <BrowserRouter>
-  <Header />
-  <Routes>
-    <Route path='page' element={<Page />}/>
-    <Route path='/'element={<>
-    <Video  videoData = {activeVideo}/>
-    <div className='comments-video-list'>
-        <div className='comments-container'>
-          <Comments videoData = {activeVideo}  />
-        </div> 
-          <VideoList videoListData={VideoListJson} onVideoClick={handleVideoClick} activeVideo={activeVideo}/> 
-    </div>
-    </>}/>
-  </Routes>
-  </BrowserRouter>
+<BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path='/video/:videoId' element={<VideoDetailsPage />} />
+        <Route path='/page' element={<Page />} />
+        <Route path='/' element={<Navigate to={home} />} />
+      </Routes>
+    </BrowserRouter>
+  ;
   
   
   </> );
