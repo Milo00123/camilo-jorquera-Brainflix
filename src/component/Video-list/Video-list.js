@@ -2,7 +2,7 @@ import './Video-list.scss';
 import { Link } from 'react-router-dom';
 
 
-function VideoList({videoListData, onVideoClick, activeVideo}){
+function VideoList({videoListData, activeVideo}){
 
     const videosToDisplay = videoListData.filter(video => video.id !== activeVideo.id);
 
@@ -11,7 +11,7 @@ function VideoList({videoListData, onVideoClick, activeVideo}){
     <h2>NEXT VIDEOS</h2>
     {
         videosToDisplay.map((video) =>{
-            return(<>
+            return(
             <Link to={`/video/${video.id}`} key={video.id}>
             <div className="video-wrap" key={video.id}>
             <img className='image-list' src={video.image} alt="Description" />
@@ -22,7 +22,7 @@ function VideoList({videoListData, onVideoClick, activeVideo}){
             </div>
             </Link>
              
-            </>)
+            )
             
         })
        

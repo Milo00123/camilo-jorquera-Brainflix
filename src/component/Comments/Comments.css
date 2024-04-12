@@ -48,7 +48,7 @@ form {
   display: flex;
   margin: auto;
 }
-form img {
+form .icon-logo {
   background-image: url("../../assets/Images/Mohan-muruge.jpg");
   background-size: cover;
   border-radius: 50px;
@@ -73,11 +73,15 @@ form textarea {
   border-radius: 4px;
   background-color: #fafafa;
 }
-form button:hover {
+
+.container-button-comment {
+  position: relative;
+}
+.container-button-comment button:hover {
   background-color: #0065AD;
   cursor: pointer;
 }
-form button {
+.container-button-comment button {
   width: 100%;
   height: 40px;
   border-radius: 4px;
@@ -86,7 +90,14 @@ form button {
   color: #fff;
   margin-top: 10px;
   margin-bottom: 20px;
+  border: none;
   cursor: pointer;
+}
+
+.add-comment-icon {
+  position: absolute;
+  top: 20px;
+  left: 10px;
 }
 
 @media (min-width: 768px) {
@@ -110,24 +121,42 @@ form button {
   .channel-timestamp--container {
     display: flex;
   }
-  form img {
+  form {
+    display: flex;
+  }
+  form .icon-logo {
     height: 50px;
   }
   form textarea {
     width: 65%;
     height: 40px;
   }
-  form button {
-    width: 30%;
-    height: 50px;
-    position: absolute;
-    right: 1px;
-    top: 18px;
-  }
   .form-container {
     height: 100px;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .label-textarea-container {
+    width: 65%;
+  }
+  .label-textarea-container textarea {
+    width: 100%;
+  }
+  .container-button-comment {
     position: relative;
+    width: 30%;
+  }
+  .container-button-comment button {
+    width: 100%;
+    height: 50px;
+    bottom: 50px;
+    right: 1px;
+    margin-top: 45px;
+  }
+  .add-comment-icon {
+    left: 10px;
+    top: 60px;
   }
 }
 @media (min-width: 1279px) {
@@ -147,18 +176,29 @@ form button {
     margin-right: 10px;
   }
   form {
-    width: 90%;
-    margin-left: 10%;
+    width: 85%;
+    margin-left: 15%;
     margin-right: 0;
   }
-  form img {
-    margin-left: 50px;
+  form .icon-logo {
+    margin-top: 20px;
+    margin-right: 0;
   }
-  form button {
-    margin-right: 20px;
+  .label-textarea-container {
+    padding-left: 20px;
   }
-  form textarea {
-    width: 60%;
-    margin-left: 20px;
+  .label-textarea-container textarea {
+    width: 100%;
+  }
+  .container-button-comment {
+    width: 23%;
+    padding-right: 20px;
+  }
+  .container-button-comment button {
+    width: 100%;
+    height: 50px;
+    bottom: 50px;
+    right: 1px;
+    margin-top: 45px;
   }
 }/*# sourceMappingURL=Comments.css.map */

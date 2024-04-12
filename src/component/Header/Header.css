@@ -1,4 +1,5 @@
 .header {
+  width: 100%;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -12,19 +13,44 @@
 
 .brainflix-logo {
   margin-left: 35%;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 
 .container-logo--avatar {
   position: relative;
-  height: 100px;
+  height: 120px;
 }
-.container-logo--avatar input {
-  width: 75%;
+
+.input-container {
+  width: 66%;
+  height: auto;
+  position: relative;
+}
+.input-container input {
+  left: 1px;
+  width: 100%;
   height: 36px;
   border-radius: 4px;
   border: 1px solid #e1e1e1;
+  padding-left: 30px;
+  padding-right: 20px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.button-header-container {
+  position: relative;
+}
+
+.upload-icon {
+  position: absolute;
+  top: 18px;
+  left: 10px;
 }
 
 .header-button:hover {
@@ -40,6 +66,8 @@
   margin-top: 10px;
   border-radius: 4px;
   border-color: #0095ff;
+  flex-grow: 1;
+  border: none;
 }
 
 .avatar-icon {
@@ -55,8 +83,10 @@
 
 @media (min-width: 768px) {
   .header-container {
+    width: 90%;
     height: 60px;
     display: flex;
+    margin-right: 0;
     justify-content: space-between;
     align-items: baseline;
   }
@@ -66,14 +96,12 @@
   }
   .container-logo--avatar {
     display: flex;
-    width: 70%;
+    width: 100%;
     height: 50px;
     justify-content: space-between;
   }
-  .container-logo--avatar input {
-    width: 230px;
-    margin-right: 20px;
-    flex-grow: 1;
+  .upload-icon {
+    top: 8px;
   }
   .header-button {
     margin: 0;
@@ -81,20 +109,36 @@
   }
   .avatar-icon {
     position: static;
-    margin-left: 20px;
+    margin-left: 10px;
+  }
+  .input-container {
+    width: 50%;
+    margin-left: 15%;
+  }
+  .input-container input {
+    width: 80%;
+    flex-grow: 1;
+    padding-right: 0;
   }
 }
 @media (min-width: 1279px) {
   .container-logo--avatar {
-    width: 40%;
+    width: 50%;
+    margin-right: 5%;
     display: flex;
-    margin-right: 100px;
     justify-content: space-between;
   }
-  .container-logo--avatar input {
-    width: 230px;
+  .input-container {
+    width: 50%;
+    margin: 0;
+  }
+  .input-container input {
+    width: 100%;
     margin-right: 20px;
     flex-grow: 1;
+  }
+  .button-header-container {
+    margin-left: 30px;
   }
   .header-button {
     margin: 0;
@@ -102,6 +146,7 @@
   }
   .avatar-icon {
     position: static;
-    margin-left: 20px;
+    margin-right: 30px;
+    margin-left: 0;
   }
 }/*# sourceMappingURL=Header.css.map */

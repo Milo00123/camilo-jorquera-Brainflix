@@ -7,8 +7,7 @@ import VideoList from '../../component/Video-list/Video-list';
 import Comments from '../../component/Comments/Comments';
 
 
-
-
+const defaultVideoId = '84e96018-4022-434e-80bf-000ce4cd12b8';
 const  apiKey= "b08b735a-8a49-4757-9dd5-46e712502667";
 
 function VideoDetailsPage() {
@@ -17,7 +16,9 @@ function VideoDetailsPage() {
     const [videoListData, setVideoListData] = useState([]);
   
     useEffect(() => {
-      axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}?api_key=${apiKey}`)
+      const idToFetch = videoId || defaultVideoId;
+
+      axios.get(`https://project-2-api.herokuapp.com/videos/${idToFetch}?api_key=${apiKey}`)
         .then((response) => setVideoDetail(response.data))
         .catch((error) => console.error("Problem Fetching Video", error));
     }, [videoId]);

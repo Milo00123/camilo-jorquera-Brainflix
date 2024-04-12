@@ -1,7 +1,8 @@
 import './Comments.scss';
 import CommentsList from '../Comments-list/Comments-list'
 import likeIcon from '../../assets/Icons/likes.svg';
-import viewIcon from '../../assets/Icons/views.svg';;
+import viewIcon from '../../assets/Icons/views.svg';
+import addComment from '../../assets/Icons/add_comment.svg';
 
 function Comments ({videoData}){
   const date = new Date (videoData.timestamp);
@@ -14,7 +15,7 @@ function Comments ({videoData}){
  return( <>
  
 
-<div className='video-description--wrap'>
+<div className='video-description--wrap' key={videoData.id}>
           <h1 className='video-title'>{videoData.title}</h1>
            <div className='main-container'>
              <div className="channel-timestamp--container">
@@ -43,10 +44,14 @@ function Comments ({videoData}){
 <img className='icon-logo'/> 
 
 <div className="form-container">
+  <div className='label-textarea-container'>
   <label htmlFor="user-name">JOIN THE CONVERSATION</label><br />
-  
   <textarea id="comment-area" placeholder="Add a new comment" name="person-comment"></textarea><br />
-  <button type="submit">COMMENT</button>
+  </div>
+  <div className='container-button-comment'>
+    <img src={addComment} className='add-comment-icon'></img>
+     <button type="submit">COMMENT</button>
+  </div>
 </div>   
       </form>
 
