@@ -6,6 +6,14 @@ text-decoration: none;
 h2{
     margin-left: 5%;
 }
+.video-wrap:hover{
+    background-color: #fafafa;
+    transform: scale(1.1);
+    img{
+        width: 220px;
+    }
+
+}
 .video-wrap{
     display: flex;
     align-items: center;
@@ -18,12 +26,16 @@ h2{
 .description-video--list{
     width: 200px;
     margin-left: 10px;
+   
     p{
         margin-top: auto;
     }
 }
 
+a:hover{
 
+    color: #0065AD;
+}
 .image-list{
     max-width:110px;
     min-width: 110px;
