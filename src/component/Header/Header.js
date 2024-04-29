@@ -21,7 +21,7 @@ function Header (){
                    </div> 
                  <div className='button-header-container'> 
                  <img src={uploadIcon} className='upload-icon'></img>     
-                <button className='header-button' onClick={()=> navigate('page')}>UPLOAD</button>
+                <button className='header-button' onClick={()=> navigate('upload')}>UPLOAD</button>
                 </div>               
                 <div className='avatar-icon'></div>
                 </div>
