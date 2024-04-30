@@ -16,7 +16,7 @@ function VideoDetailsPage() {
   
     useEffect(() => {
       const fetchVideoList = () => {
-          axios.get(`http://localhost:8080/videos?api_key=${apiKey}`)
+          axios.get(`http://localhost:8080/videos`)
               .then(response => {
                   setData(prevState => ({
                       ...prevState,
@@ -27,7 +27,7 @@ function VideoDetailsPage() {
       };
 
       const fetchVideoDetail = (idToFetch) => {
-          axios.get(`http://localhost:8080/videos/${idToFetch}?api_key=${apiKey}`)
+          axios.get(`http://localhost:8080/videos/${idToFetch}`)
               .then(response => {
                   setData(prevState => ({
                       ...prevState,
