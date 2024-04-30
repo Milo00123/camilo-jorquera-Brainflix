@@ -12,32 +12,46 @@ const  apiKey= "b08b735a-8a49-4757-9dd5-46e712502667";
 
 function VideoDetailsPage() {
     let { videoId } = useParams();
-    const [videoDetail, setVideoDetail] = useState({ comments: [] });
-    const [videoListData, setVideoListData] = useState([]);
+    const [data, setData] = useState({ videoDetail: { comments: [] }, videoListData: [] });
   
     useEffect(() => {
-      const idToFetch = videoId || defaultVideoId;
+      const fetchVideoList = () => {
+          axios.get(`http://localhost:8080/videos?api_key=${apiKey}`)
+              .then(response => {
+                  setData(prevState => ({
+                      ...prevState,
+                      videoListData: response.data
+                  }));
+              })
+              .catch(error => console.error("Problem Fetching Video List", error));
+      };
 
-      axios.get(`https://project-2-api.herokuapp.com/videos/${idToFetch}?api_key=${apiKey}`)
-        .then((response) => setVideoDetail(response.data))
-        .catch((error) => console.error("Problem Fetching Video", error));
-    }, [videoId]);
-  
-    useEffect(() => {
-      axios.get(`https://project-2-api.herokuapp.com/videos?api_key=${apiKey}`)
-        .then((response) => setVideoListData(response.data))
-        .catch((error) => console.error("Problem Feching Video List", error));
-    }, []);
+      const fetchVideoDetail = (idToFetch) => {
+          axios.get(`http://localhost:8080/videos/${idToFetch}?api_key=${apiKey}`)
+              .then(response => {
+                  setData(prevState => ({
+                      ...prevState,
+                      videoDetail: response.data
+                  }));
+              })
+              .catch(error => console.error("Problem Fetching Video", error));
+      };
+      fetchVideoList();
+      const idToFetch = videoId || defaultVideoId;
+      fetchVideoDetail(idToFetch);
+
+  }, [videoId]); 
+
   
     return (
-      <>
-        <Video videoData={videoDetail} />
+      <> 
+        <Video videoData={data.videoDetail} />
         <div className='comments-video-list'>
           <div className='comments-container'>
-            <Comments videoData={videoDetail} />
+            <Comments videoData={data.videoDetail} />
            
           </div>
-          <VideoList videoListData={videoListData} activeVideo={videoDetail} />
+          <VideoList videoListData={data.videoListData} activeVideo={data.videoDetail} />
         </div>
       </>
     );
