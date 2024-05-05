@@ -8,7 +8,7 @@ import Comments from '../../component/Comments/Comments';
 
 
 const defaultVideoId = '84e96018-4022-434e-80bf-000ce4cd12b8';
-const  apiKey= "b08b735a-8a49-4757-9dd5-46e712502667";
+
 
 function VideoDetailsPage() {
     let { videoId } = useParams();
@@ -16,7 +16,7 @@ function VideoDetailsPage() {
   
     useEffect(() => {
       const fetchVideoList = () => {
-          axios.get(`http://localhost:8080/videos?api_key=${apiKey}`)
+          axios.get(`http://localhost:8080/videos?`)
               .then(response => {
                   setData(prevState => ({
                       ...prevState,
@@ -27,7 +27,7 @@ function VideoDetailsPage() {
       };
 
       const fetchVideoDetail = (idToFetch) => {
-          axios.get(`http://localhost:8080/videos/${idToFetch}?api_key=${apiKey}`)
+          axios.get(`http://localhost:8080/videos/${idToFetch}`)
               .then(response => {
                   setData(prevState => ({
                       ...prevState,
