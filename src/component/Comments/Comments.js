@@ -41,7 +41,9 @@ function Comments ({videoData}){
 
 
 <form>
+  <div className='icon-logo-container'>
 <img className='icon-logo'/> 
+</div>
 
 <div className="form-container">
   <div className='label-textarea-container'>
