@@ -19,7 +19,7 @@ function Page() {
       event.preventDefault();
       const videoData ={
          title,
-         description,
+         description: 'Luxury is something everyone deserves from time to time. Such an indulgence can make a vacation a truly rejuvenating experience. This video will focus a lot on helping the first time or inexperienced traveler head out prepared and confident in themselves.',
          image:'http://localhost:8080/images/upload-video.jpg',
          channel: 'Super Camilo', 
          views: '0',  
@@ -42,13 +42,7 @@ function Page() {
                "likes": 10003393092,
                "timestamp": new Date()
              },
-             {
-               "id": "2d818087-c1f4-4ec2-bcdc-b543fd6ec258",
-               "name": "taylor swift",
-               "comment": "I love you so much camilo",
-               "likes": 10003393092,
-               "timestamp": new Date()
-             }
+            
          ]  
       }
       axios.post('http://localhost:8080/videos', videoData)
