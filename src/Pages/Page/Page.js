@@ -19,7 +19,37 @@ function Page() {
       event.preventDefault();
       const videoData ={
          title,
-         description
+         description,
+         image:'http://localhost:8080/images/upload-video.jpg',
+         channel: 'Super Camilo', 
+         views: '0',  
+         likes: '0',  
+         duration: '00:00',
+         video: '',
+         timestamp: Date.now(),
+         comments: [ 
+            {
+               "id": "2d818087-c1f4-4ec2-b5dc-b545fd6ec258",
+               "name": "chewbacca",
+               "comment": "waahahhwahaaaaaagggrrgrrrrr",
+               "likes": 10003393092,
+               "timestamp": new Date()
+             },
+             {
+               "id": "2d818087-c1f4-4ec2-bcdc-b545fd6ec258",
+               "name": "obi wan kenobi",
+               "comment": "may the force be with you",
+               "likes": 10003393092,
+               "timestamp": new Date()
+             },
+             {
+               "id": "2d818087-c1f4-4ec2-bcdc-b543fd6ec258",
+               "name": "taylor swift",
+               "comment": "I love you so much camilo",
+               "likes": 10003393092,
+               "timestamp": new Date()
+             }
+         ]  
       }
       axios.post('http://localhost:8080/videos', videoData)
       .then(response =>{
